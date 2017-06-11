@@ -15,7 +15,8 @@ After installation, each post will have a 'Roll Dice' option to the left of 'Edi
 - `tid` => Thread id to post dice rolls to.  
 - `pid` => Post id to reply to.  
 - `# of rolls` => Number of times to roll the dice.  
-- `Lower bound`/`Upper bound` => INCLUSIVE Range of values to return on the dice roll.  
+- `Lower bound`/`Upper bound` => INCLUSIVE Range of values to return on the dice roll.
+
 On submission of valid data, the thread will be replied to with the resulting random values.  
 Currently, only users with admin permissions can see the results and trigger dice rolls.
 
