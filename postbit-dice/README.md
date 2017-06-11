@@ -11,11 +11,11 @@ Copy the files into the root of the MyBB installation. This should merge the con
 The plugin should appear in the MyBB plugin manager in the Admin CP as 'Postbit Dice'. Select the 'Install & Activate' option.  
 
 ### Usage
-After installation, each post will have a 'Roll Dice' option to the left of 'Edit' button. The button will trigger a pop-over window similar to the default report button with five fields:
-    `tid` => Thread id to post dice rolls to.  
-    `pid` => Post id to reply to.  
-    `# of rolls` => Number of times to roll the dice.  
-    `Lower bound`/`Upper bound` => INCLUSIVE Range of values to return on the dice roll.  
+After installation, each post will have a 'Roll Dice' option to the left of 'Edit' button. The button will trigger a pop-over window similar to the default report button with five fields:  
+- `tid` => Thread id to post dice rolls to.  
+- `pid` => Post id to reply to.  
+- `# of rolls` => Number of times to roll the dice.  
+- `Lower bound`/`Upper bound` => INCLUSIVE Range of values to return on the dice roll.  
 On submission of valid data, the thread will be replied to with the resulting random values.  
 Currently, only users with admin permissions can see the results and trigger dice rolls.
 
