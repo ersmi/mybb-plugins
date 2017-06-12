@@ -74,9 +74,6 @@ else # print the entire html page, TODO: inc. into templates.
     var tid = ' . $_GET['tid'] . ';
     var v = 1
     
-    console.log(tid);
-    console.log(pid);
-    
     function init()
     {
         document.getElementById("tid").value = tid;
@@ -85,12 +82,9 @@ else # print the entire html page, TODO: inc. into templates.
     
     function addroll()
     {
-        console.log("MADE IT")
         var d = document.getElementById("rolls").innerHTML;
-        console.log(d);
         v = v + 1;
         d = d + \'<input type="text" name="n\'+v+\'" value="# of rolls"> <input type="text" name="l\'+v+\'" value="Lower bound"> <input type="text" name="u\'+v+\'" value="Upper bound">\';
-        console.log(d);
         document.getElementById("rolls").innerHTML = d
     }
 
