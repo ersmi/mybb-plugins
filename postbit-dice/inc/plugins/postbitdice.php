@@ -18,7 +18,7 @@ function postbitdice_info()
 		"version"		=> "0.0.1",
 		"guid" 			=> "",
 		"codename"		=> "ersmi_postbit-dice",
-		"compatibility" => "*"
+		"compatibility" => "1812"
 	);
 }
 
