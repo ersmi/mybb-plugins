@@ -64,46 +64,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' and $mybb->usergroup['cancp'] == 1)
     # Change http header to redirect back to thread.
     header('Location: ' . $returl);
 }
-else # print the entire html page, TODO: inc. into templates.
-{
-    print '
-<!DOCTYPE html>
-<html>
-<script>
-    var pid = ' . $_GET['pid'] . ';
-    var tid = ' . $_GET['tid'] . ';
-    var v = 1
-    
-    function init()
-    {
-        document.getElementById("tid").value = tid;
-        document.getElementById("pid").value = pid;
-    }
-    
-    function addroll()
-    {
-        var d = document.getElementById("rolls").innerHTML;
-        v = v + 1;
-        d = d + \'<input type="text" name="n\'+v+\'" value="# of rolls"> <input type="text" name="l\'+v+\'" value="Lower bound"> <input type="text" name="u\'+v+\'" value="Upper bound">\';
-        document.getElementById("rolls").innerHTML = d
-    }
-
-</script>
-<body onload="init()">
-    <button onclick="addroll()">+</button> 
-    <form action="./diceform.php" method="post">
-        tid: <input type="text" name="tid" id="tid"><br>
-        pid: <input type="text" name="pid" id="pid"><br>
-        Rolls: <br> 
-        <div id="rolls"> 
-            <input type="text" name="n1" value="# of rolls">
-            <input type="text" name="l1" value="Lower bound">
-            <input type="text" name="u1" value="Upper bound">
-        </div>
-        <input type="submit" value="Submit">
-            
-    </form>
-</body>
-</html>';
-}
 ?>

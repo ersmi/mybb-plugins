@@ -95,10 +95,6 @@ function dicebutton($post)
     function rollDice(pid, tid)
 	{
         init(pid,tid);
-        // console.log("PLEASE");
-        // $(document).ready(function(){
-		// });
-		// window.location = ("/diceform.php?&pid="+pid+"&tid="+tid);
         //MyBB.popupWindow("/diceform.php?&pid="+pid+"&tid="+tid);
         var dicemodal = document.getElementById("dicemodal");
         dicemodal.style.display = "block";
@@ -109,10 +105,7 @@ function dicebutton($post)
         m.style.display = "none";
     }
     var v = 1
-    
-    console.log(tid);
-    console.log(pid);
-    
+
     function init(pid, tid)
     {
         document.getElementById("tid").value = tid;
@@ -121,12 +114,9 @@ function dicebutton($post)
     
     function addroll()
     {
-        console.log("MADE IT")
         var d = document.getElementById("rolls").innerHTML;
-        console.log(d);
         v = v + 1;
         d = d + \'<input type="text" name="n\'+v+\'" value="# of rolls"> <input type="text" name="l\'+v+\'" value="Lower bound"> <input type="text" name="u\'+v+\'" value="Upper bound">\';
-        console.log(d);
         document.getElementById("rolls").innerHTML = d
     }
     </script>
