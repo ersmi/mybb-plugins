@@ -15,9 +15,9 @@ function postbitdice_info()
 		"description"	=> "Diceroll buttons for user posts",
 		"author"		=> "ersmi",
 		"authorsite"	=> "https://www.github.com/ersmi",
-		"version"		=> "0.0.1",
+		"version"		=> "0.0.0",
 		"guid" 			=> "",
-		"codename"		=> "ersmi_postbit-dice",
+		"codename"		=> "ersmi_postbit_dice",
 		"compatibility" => "1812"
 	);
 }
@@ -126,8 +126,8 @@ function dicebutton($post)
             <span id="closebutton" class="closebutton" onclick="closeModal()">X</span>
         <body class="diceformbody">
         <form action="./diceform.php" method="post">
-        tid: <input type="hidden" name="tid" id="tid">
-        pid: <input type="hidden" name="pid" id="pid">
+        <input type="hidden" name="tid" id="tid">
+        <input type="hidden" name="pid" id="pid">
         Rolls: <button type="button" onclick="addroll()">+</button> <br> 
         <div id="rolls"> 
             <input type="text" name="n1" value="# of rolls">
