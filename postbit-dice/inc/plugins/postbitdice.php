@@ -126,8 +126,8 @@ function dicebutton($post)
             <span id="closebutton" class="closebutton" onclick="closeModal()">X</span>
         <body class="diceformbody">
         <form action="./diceform.php" method="post">
-        tid: <input type="text" name="tid" id="tid"><br>
-        pid: <input type="text" name="pid" id="pid"> (You probably don\'t want to change these...)<br>
+        tid: <input type="hidden" name="tid" id="tid">
+        pid: <input type="hidden" name="pid" id="pid">
         Rolls: <button type="button" onclick="addroll()">+</button> <br> 
         <div id="rolls"> 
             <input type="text" name="n1" value="# of rolls">
