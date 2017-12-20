@@ -17,7 +17,7 @@ function hiddenreplies_info()
 		"description"	=> "Adds option for moderators to hide new posts",
         "author"        => "ersmi",
 		"authorsite"	=> "https://www.github.com/ersmi",
-		"version"		=> "0.0.0",
+		"version"		=> "0.0.1",
 		"guid" 			=> "",
 		"codename"		=> "ersmi_hidden-replies",
 		"compatibility" => "1812"
@@ -30,7 +30,7 @@ function hiddenreplies_install()
     
     $template1 = '<br /><label><input type="checkbox" class="checkbox" name="visible" value="3" />&nbsp;<strong>Hide Post:</strong> make this reply only visible to admins</label><br />';
     
-    $template2 = '<label><input type="checkbox" class="checkbox" name="visible" value="3" />&nbsp;<strong>Hide Post</strong></label><br />';
+    $template2 = '<br /><label><input type="checkbox" class="checkbox" name="visible" value="3" />&nbsp;<strong>Hide Post</strong></label>';
     
     require_once MYBB_ROOT."/inc/adminfunctions_templates.php";
 
@@ -41,9 +41,9 @@ function hiddenreplies_install()
     );
     
     find_replace_templatesets(
-        "showthread_quickreply",
-        "#" . preg_quote('{$option_signature}') . "#i",
-        '{$hideoption_quickreply}{$option_signature}'
+        "showthread_quickreply_options_close",
+        "#" . preg_quote('</label>') . "#i",
+        '</label>{$hideoption_quickreply}'
     );
     
     $insert_array = array(

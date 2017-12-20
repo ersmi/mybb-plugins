@@ -13,8 +13,11 @@ The plugin should appear in the MyBB plugin manager in the Admin CP as 'Hidden R
 Replies have a checkbox for "Hide Post" in the moderators options.
 
 ### Changelog
+###### 0.0.1
+- Removed non-functional hide post option for normal users (Moved template to piggyback off close_thread)
 ###### 0.0.0
 - Base functionality.
+
 
 ### Todo 
 
